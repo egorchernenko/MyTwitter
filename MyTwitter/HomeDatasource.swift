@@ -12,13 +12,15 @@ class HomeDatasource: Datasource {
     
     let users: [User] = {
         let elonUser = User(name: "Elon Musk ", username: "@elonmusk", bioText: "Pics of SpaceX spacesuit developed for NASA commercial crew program coming out next week. Undergoing ocean landing mobility/safety tests.",profileImage: #imageLiteral(resourceName: "profile_image"))
-        let rayUser = User(name: "Ray Wenderlich", username: "@wenderlich", bioText: "welcome back to the swift tutorial text text text text text text text text text text welcome back to the swift tutorial text text text text text text text text text text welcome back to the swift tutorial text text text text text text text text text text xt text text text text text text text welcome back to the swift tutorial text text text text text text text text text text welcome back to the swift tutorial text text text text text text text text text text xt text text text text text text text welcome back to the swift tutorial text text text text text text text text text text welcome back to the swift tutorial text text text text text text text text text text xt text text text text text text text welcome back to the swift tutorial text text text text text text text text text text welcome back to the swift tutorial text text text text text text text text text text",profileImage: #imageLiteral(resourceName: "ray_wenderlich"))
+        let rayUser = User(name: "Ray Wenderlich", username: "@wenderlich", bioText: "welcome back to the swift tutorial text text text text text text text text text text welcome back to the swift tutorial text text text text text text text text text text welcome back to the swift tutorial text text text text text text tex",profileImage: #imageLiteral(resourceName: "ray_wenderlich"))
+        let elonUser2 = User(name: "Elon Musk ", username: "@elonmusk", bioText: "Pics of SpaceX spacesuit developed for NASA commercial crew program coming out next week. Undergoing ocean landing mobility/safety tests.",profileImage: #imageLiteral(resourceName: "profile_image"))
         
         
-        return [elonUser, rayUser]
+        return [elonUser, rayUser,elonUser2]
     }()
     
     //let words = ["user1","user2","user3"]
+    let tweets = ["tweet1", "tweet2"]
     
     override func footerClasses() -> [DatasourceCell.Type]? {
         return [UserFooter.self]
@@ -29,14 +31,21 @@ class HomeDatasource: Datasource {
     }
     
     override func cellClasses() -> [DatasourceCell.Type] {
-        return [UserCell.self]
+        return [UserCell.self,TweetCell.self]
     }
     
     override func item(_ indexPath: IndexPath) -> Any? {
         return users[indexPath.item]
     }
     
+    override func numberOfSections() -> Int {
+        return 2
+    }
+    
     override func numberOfItems(_ section: Int) -> Int {
+        if section == 1{
+            return tweets.count
+        }
         return users.count
     }
 }
