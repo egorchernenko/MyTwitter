@@ -11,8 +11,10 @@ import LBTAComponents
 class HomeDatasource: Datasource {
     
     let users: [User] = {
-        let elonUser = User(name: "Elon Musk ", username: "@elonmusk", bioText: "SOME MORE BIO TEXT ",profileImage: #imageLiteral(resourceName: "profile_image"))
-        let rayUser = User(name: "Ray Wenderlich", username: "@wenderlich", bioText: "welcome back to the swift tutorial text text text text text text text text text text",profileImage: #imageLiteral(resourceName: "ray_wenderlich"))
+        let elonUser = User(name: "Elon Musk ", username: "@elonmusk", bioText: "Pics of SpaceX spacesuit developed for NASA commercial crew program coming out next week. Undergoing ocean landing mobility/safety tests.",profileImage: #imageLiteral(resourceName: "profile_image"))
+        let rayUser = User(name: "Ray Wenderlich", username: "@wenderlich", bioText: "welcome back to the swift tutorial text text text text text text text text text text welcome back to the swift tutorial text text text text text text text text text text welcome back to the swift tutorial text text text text text text text text text text xt text text text text text text text welcome back to the swift tutorial text text text text text text text text text text welcome back to the swift tutorial text text text text text text text text text text xt text text text text text text text welcome back to the swift tutorial text text text text text text text text text text welcome back to the swift tutorial text text text text text text text text text text xt text text text text text text text welcome back to the swift tutorial text text text text text text text text text text welcome back to the swift tutorial text text text text text text text text text text",profileImage: #imageLiteral(resourceName: "ray_wenderlich"))
+        
+        
         return [elonUser, rayUser]
     }()
     
