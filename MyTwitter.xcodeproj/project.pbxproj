@@ -19,6 +19,7 @@
 		747D51511F549FE200E52D2C /* HomeDatasourceController+navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747D51501F549FE200E52D2C /* HomeDatasourceController+navbar.swift */; };
 		747D51531F54A61800E52D2C /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747D51521F54A61800E52D2C /* TweetCell.swift */; };
 		747D51551F56AC6D00E52D2C /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747D51541F56AC6D00E52D2C /* Tweet.swift */; };
+		747D51581F56CC2400E52D2C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747D51571F56CC2400E52D2C /* Service.swift */; };
 		86BD30937304AB10EC4B50A3 /* Pods_MyTwitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780CB82909B16164EFBB7016 /* Pods_MyTwitter.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		747D51501F549FE200E52D2C /* HomeDatasourceController+navbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+navbar.swift"; sourceTree = "<group>"; };
 		747D51521F54A61800E52D2C /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		747D51541F56AC6D00E52D2C /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		747D51571F56CC2400E52D2C /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		780CB82909B16164EFBB7016 /* Pods_MyTwitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTwitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9463B6C07FA48FF62055C25 /* Pods-MyTwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTwitter/Pods-MyTwitter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 		747D512E1F541C3200E52D2C /* MyTwitter */ = {
 			isa = PBXGroup;
 			children = (
+				747D51561F56CC1600E52D2C /* Service */,
 				747D51471F54363200E52D2C /* View */,
 				747D51461F54362800E52D2C /* Model */,
 				747D51451F54361D00E52D2C /* Controller */,
@@ -123,6 +126,14 @@
 				747D51521F54A61800E52D2C /* TweetCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		747D51561F56CC1600E52D2C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				747D51571F56CC2400E52D2C /* Service.swift */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 		C9054AE6E4944C82927678FA /* Frameworks */ = {
@@ -263,6 +274,7 @@
 				747D51491F54364800E52D2C /* UserHeaderFooterCells.swift in Sources */,
 				747D51441F542A7400E52D2C /* HomeDatasourceController.swift in Sources */,
 				747D51511F549FE200E52D2C /* HomeDatasourceController+navbar.swift in Sources */,
+				747D51581F56CC2400E52D2C /* Service.swift in Sources */,
 				747D514F1F547AC300E52D2C /* UsersCell.swift in Sources */,
 				747D51421F541DE600E52D2C /* HomeController.swift in Sources */,
 			);
