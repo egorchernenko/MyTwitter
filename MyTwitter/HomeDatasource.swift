@@ -7,19 +7,29 @@
 //
 
 import LBTAComponents
-
-class HomeDatasource: Datasource {
+import TRON
+import SwiftyJSON
+class HomeDatasource: Datasource, JSONDecodable {
     
-    let users: [User] = {
-        let elonUser = User(name: "Elon Musk ", username: "@elonmusk", bioText: "Pics of SpaceX spacesuit developed for NASA commercial crew program coming out next week. Undergoing ocean landing mobility/safety tests.",profileImage: #imageLiteral(resourceName: "profile_image"))
-        let rayUser = User(name: "Ray Wenderlich", username: "@wenderlich", bioText: "welcome back to the swift tutorial text text text text text text text text text text welcome back to the swift tutorial text text text text text text text text text text welcome back to the swift tutorial text text text text text text tex",profileImage: #imageLiteral(resourceName: "ray_wenderlich"))
-        let elonUser2 = User(name: "Elon Musk ", username: "@elonmusk", bioText: "Pics of SpaceX spacesuit developed for NASA commercial crew program coming out next week. Undergoing ocean landing mobility/safety tests.",profileImage: #imageLiteral(resourceName: "profile_image"))
-        
-        
-        return [elonUser, rayUser,elonUser2]
-    }()
+    let users: [User]
     
-    //let words = ["user1","user2","user3"]
+    required init(json: JSON) throws {
+        //print("Now ready to parse json: \n", json)
+        
+        var users = [User]()
+        
+        let arr = json["users"].array
+        for userJson in arr!{
+            let name = userJson["name"].stringValue
+            let username = userJson["username"].stringValue
+            let bio = userJson["bio"].stringValue
+            
+            let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+            
+            users.append(user)
+        }
+        self.users = users
+    }
     let tweets: [Tweet] = {
         let elonUser = User(name: "Elon Musk ", username: "@elonmusk", bioText: "Pics of SpaceX spacesuit developed for NASA commercial crew program coming out next week. Undergoing ocean landing mobility/safety tests.",profileImage: #imageLiteral(resourceName: "profile_image"))
 
