@@ -23,9 +23,7 @@ class HomeDatasourceController : DatasourceController{
         
         setupNavigationBarItems()
         
-        print(1)
         Service.sharedInstance.fetchHomeFeed { (homeDatasource) in
-            print(3)
             self.datasource = homeDatasource
         }
     }
